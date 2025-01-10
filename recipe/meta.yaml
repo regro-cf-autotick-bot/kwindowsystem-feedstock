@@ -1,5 +1,5 @@
 {% set name = "kwindowsystem" %}
-{% set version = "5.115.0" %}
+{% set version = "6.10.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://download.kde.org/stable/frameworks/{{ major_minor }}/kwindowsystem-{{ version }}.tar.xz
-  sha256: e0a06b19b5fb3ce534b35ddb1db96911c9452e791c0c650eae77bf59fb355f53
+  sha256: 046b7aa2247811323e48b629884b824a6ffec475df2316256e7ff0b9df677944
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('kwindowsystem', max_pin='x.x') }}
